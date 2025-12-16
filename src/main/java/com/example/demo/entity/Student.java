@@ -12,22 +12,28 @@ public class Student{
     public void setId(){
         this.id=id;
     }
-    public String getName(){
+    public String getName(Long id){
         return name;
     }
-    public void setName(){
+    public void setName(String name){
         this.name=name;
     }
     public String getEmail(){
         return email;
     }
-    public void setEmail(){
+    public void setEmail(String email){
         this.email=email;
     }
     public float getCgpa(){
         return cgpa;
     }
-    public void setCgpa(){
+    public void setCgpa(float cgpa){
+        this.cgpa=cgpa;
+    }
+    public Student(Long id,String name,String email,float cgpa){
+        this.id=id;
+        this.name=name;
+        this.email=email;
         this.cgpa=cgpa;
     }
 
