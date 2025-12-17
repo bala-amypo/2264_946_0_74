@@ -4,19 +4,22 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 
+@Entity
+
 public class Student{
-    private Long Id;
+    @Id
+    private int Id;
     private String name;
     private String email;
     private float cgpa;
 
-    public Long getId(){
+    public int getId(){
         return id;
     }
     public void setId(){
         this.id=id;
     }
-    public String getName(Long id){
+    public String getName(int id){
         return name;
     }
     public void setName(String name){
@@ -34,7 +37,7 @@ public class Student{
     public void setCgpa(float cgpa){
         this.cgpa=cgpa;
     }
-    public Student(Long id,String name,String email,float cgpa){
+    public Student(int id,String name,String email,float cgpa){
         this.id=id;
         this.name=name;
         this.email=email;
