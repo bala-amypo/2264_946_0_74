@@ -1,4 +1,4 @@
-package com.example.dom.sevice;
+package com.example.dom.service;
 
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.service.serviceimpl;
 
 
 import java.util.List;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 
 
-public class StudentServiceImpl{
+public class StudentServiceImpl implements StudentService{
 
     @Autowired
     StudentRepository repo;
