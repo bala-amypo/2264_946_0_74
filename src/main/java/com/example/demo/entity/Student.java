@@ -1,4 +1,4 @@
-package com.example.demo.entity.Student;
+package com.example.demo.entity;
 
 
 
@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 
 public class Student{
     @Id
-    private int Id;
+    private int id;
     private String name;
     private String email;
     private float cgpa;
@@ -44,6 +44,9 @@ public class Student{
         this.name=name;
         this.email=email;
         this.cgpa=cgpa;
+    }
+    public Student(){
+        
     }
 
 }
