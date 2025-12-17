@@ -8,6 +8,6 @@ import com.example.demo.entity.Student;
 public interface StudentService{
 
 
-    Student createData(student stu);
+    Student createData(Student stu);
     List<Student> fetchRecord();
 }
