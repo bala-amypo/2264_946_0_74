@@ -1,5 +1,4 @@
-package com.example.demo.service.serviceimpl;
-
+package com.example.demo.studentserviceimp;
 
 import java.util.List;
 
@@ -11,24 +10,16 @@ import com.example.demo.service.StudentService;
 import org.springframework.stereotype.Service;
 
 
-@Service
-
-
-
-public class StudentServiceImpl implements StudentService{
-
+public class StudentServiceImp implements StudentService{
     @Autowired
     StudentRepository repo;
 
-
     @Override
-
     public Student createData(Student stu){
-        return repo.save();
+        return repo.save(stu);
     }
-
-    @Override
-    public List<Student> fetchRecord(){
+    @Override 
+    public List<Student>fetchRecord(){
         return repo.findAll();
     }
 }
