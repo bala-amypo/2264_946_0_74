@@ -2,13 +2,25 @@ package com.example.demo.service;
 
 
 
+
+@Service
+
+
+
 public class StudentServiceImpl{
 
+    @Autowired
+    StudentRepostiory repo;
+
+
+    @Override
 
     public Student createData(Student stu){
-        return rep.save();
+        return repo.save();
     }
-    public Student fetchRecord(){
-        return rep.findAll();
+
+    @Override
+    public List<Student> fetchRecord(){
+        return repo.findAll();
     }
 }
