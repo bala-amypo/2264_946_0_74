@@ -1,16 +1,15 @@
 package com.example.demo.service.impl;
-
 import java.util.*;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentServiceImp implements StudentService{
+public class StuServiceImpl implements StudentService{
+
     @Autowired
     StudentRepository repo;
 
@@ -18,17 +17,19 @@ public class StudentServiceImp implements StudentService{
     public Student createData(Student stu){
         return repo.save(stu);
     }
-    @Override 
+
+    @Override
     public List<Student> fetchRecord(){
         return repo.findAll();
     }
-    @Override
+
+   @Override
     public Optional<Student> fetchDataById(int id){
         return repo.findById(id);
-    } 
+    }
+
     @Override
-    
     public void deleteData(int id){
-        return repo.deleteById(id);
-    } 
+         repo.deleteById(id); 
+    }
 }
